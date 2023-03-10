@@ -14,11 +14,11 @@ ProductTag.init(
     },
     product_id: {
       type: DataTypes.INTEGER,
-      //references product models ID
+      //references product models ID(add foreign key or references)
     },
     tag_id: {
       type: DataTypes.INTEGER,
-      //references tag models ID
+      //references tag models ID (add foreign key or references)
     
     },
   },
