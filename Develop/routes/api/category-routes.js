@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   // find one category by its `id` value
   try {
-  const userData = await User.findByPk(req.params.id).catch((err) =>
+  const userData = await Category.findByPk(req.params.id).catch((err) =>
     res.status(200).json(err));
    } catch (err) {
   res.status(404).json(userData)
@@ -24,8 +24,14 @@ router.get('/:id', async (req, res) => {
   // be sure to include its associated Products
 });
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   // create a new category
+  try {
+    const readerData = await Category.create(req.body);
+    res.status(200).json(readerData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
 });
 
 router.put('/:id', (req, res) => {
