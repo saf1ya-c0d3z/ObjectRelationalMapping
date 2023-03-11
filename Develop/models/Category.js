@@ -14,9 +14,10 @@ Category.init(
       autoIncrement: true,
     },
 
-  price: {
+  category_names: {
       type: DataTypes.STRING,
       allowNull: false,
+      defaultValue: "nothing"
     },
   },
  {  sequelize,

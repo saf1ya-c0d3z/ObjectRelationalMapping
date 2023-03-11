@@ -37,10 +37,7 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-    const userData = await Tag.create({
-  
-      product_id: req.body.product_id, //should this be category_id?
-    });
+    const userData = await Tag.create(req.body);
     res.status(200).json(userData);
   } catch (err) {
     res.status(400).json(err);
@@ -48,16 +45,43 @@ router.post('/', async (req, res) => {
   // create a new tag
 });
 
-router.put('/:id', (req, res) => {
-  // update a tag's name by its `id` value
-});
-
-router.delete('/:id', (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
-    const libraryCardData = await LibraryCard.destroy({
+    const userData = await Tag.update({
       where: {
         id: req.params.id,
       },
+    });
+
+    if (!userData) {
+      res.status(404).json({ message: 'No Tag found with that id!' });
+      return;
+    }
+
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+  // update a tag's name by its `id` value
+});
+
+router.delete('/:id', async (req, res) => {
+  try {
+    const userData = await Tag.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    if (!userData) {
+      res.status(404).json({ message: 'No Tag found with that id!' });
+      return;
+    }
+
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
   // delete on tag by its `id` value
 });
 

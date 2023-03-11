@@ -44,19 +44,35 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.put('/:id', (req, res) => {
-  // update a category by its `id` value
-});
-
-router.delete('/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
-    const readerData = await Category.destroy({
+    const userData = await Category.update({
       where: {
         id: req.params.id,
       },
     });
 
-    if (!readerData) {
+    if (!userData) {
+      res.status(404).json({ message: 'No Category found with that id!' });
+      return;
+    }
+
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+  // update a category by its `id` value
+});
+
+router.delete('/:id', async (req, res) => {
+  try {
+    const userData = await Category.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    if (!userData) {
       res.status(404).json({ message: 'No Category found with that id!' });
       return;
     }
