@@ -26,7 +26,7 @@ ProductTag.init(
         model: "tag",
         key: "id"
       }
-      //references tag models ID (add foreign key or references)
+  
     
     },
   },
