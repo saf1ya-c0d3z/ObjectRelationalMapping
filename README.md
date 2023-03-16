@@ -16,7 +16,8 @@ This application uses Insomnia to "Put", "Post". "Get" and "Delete" Data to the 
 
 # Screenshots
 
-### Screenshot of end of video walkthrough #### (video file was too large so it is posted in the turn in box on bootcampspot)
+### Screenshot of end of video walkthrough 
+#### (video file was too large so it is posted in the turn in box on bootcampspot)
 
 <img width="1440" alt="Screen Shot 2023-03-16 at 7 34 26 AM" src="https://user-images.githubusercontent.com/118941179/225650643-b9572ee1-6857-4504-b2e0-6edaa0076395.png">
 
