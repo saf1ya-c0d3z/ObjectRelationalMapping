@@ -23,7 +23,7 @@ This application uses Insomnia to "Put", "Post", "Get", "Delete", and "find by I
 
 # Walkthrough video link (youtube)
 
-<a href= "https://youtu.be/AUkbUOl6B_g"> </a>
+<a href= "https://youtu.be/AUkbUOl6B_g"> https://youtu.be/AUkbUOl6B_g </a>
 
 # Sources
 
