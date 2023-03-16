@@ -12,7 +12,7 @@ This project is demonstarting how the back-end of an eccomerce site works. It us
 
 # Usage
 
-This application uses Insomnia to "Put", "Post". "Get" and "Delete" Data to the Database through the backend of a webserver.
+This application uses Insomnia to "Put", "Post", "Get", "Delete", and "find by ID" Data to the Database through the backend of a webserver.
 
 # Screenshots
 
