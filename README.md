@@ -4,7 +4,7 @@ This project is demonstarting how the back-end of an eccomerce site works. It us
 
 # Technologies Used
 <li>JavaScript</li>
-<li>MySQL/li>
+<li>MySQL</li>
 <li>Sequalize</li>
 <li>Insomnia</li>
 <li>NPM</li>
